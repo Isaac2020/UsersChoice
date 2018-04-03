@@ -15,7 +15,7 @@ public class EstherActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_esther);
+        setContentView(R.layout.activity_list);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -29,10 +29,14 @@ public class EstherActivity extends AppCompatActivity {
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ArrayList<Item> items = new ArrayList<Item>();
-        items.add(new Item ("Rice", 100, R.drawable.michga_foods ));
-        items.add(new Item ("Rice", 100, R.drawable.michga_foods ));
-        items.add(new Item ("Rice", 100, R.drawable.michga_foods ));
+        ArrayList<Item> items = new ArrayList<>();
+        items.add(new Item("Rice", "N100", R.drawable.michga_foods));
+        items.add(new Item("Rice", "N100", R.drawable.michga_foods));
+        items.add(new Item("Rice", "N100", R.drawable.michga_foods));
+        items.add(new Item("Rice", "N100", R.drawable.michga_foods));
+        items.add(new Item("Rice", "N100", R.drawable.michga_foods));
+        items.add(new Item("Rice", "N100", R.drawable.michga_foods));
+        items.add(new Item("Rice", "N100", R.drawable.michga_foods));
 
 
         ItemAdapter adapter = new ItemAdapter(this,items);

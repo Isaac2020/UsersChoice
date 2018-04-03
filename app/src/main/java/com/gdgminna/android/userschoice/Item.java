@@ -6,10 +6,10 @@ package com.gdgminna.android.userschoice;
 
 public class Item {
     private String mName;
-    private int mPrice;
+    private String mPrice;
     private  int mImageResourceId;
 
-    public Item(String name, int price, int imageResourceId){
+    public Item(String name, String price, int imageResourceId) {
         mName = name;
         mPrice = price;
         mImageResourceId = imageResourceId;
@@ -18,10 +18,12 @@ public class Item {
     public String getName() {
         return mName;
     }
-    public int getmPrice(){
+
+    public String getPrice() {
         return mPrice;
     }
-    public int getmImageResourceId(){
+
+    public int getImageResourceId() {
         return mImageResourceId;
     }
 }

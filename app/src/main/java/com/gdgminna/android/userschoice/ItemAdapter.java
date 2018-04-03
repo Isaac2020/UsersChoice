@@ -19,10 +19,11 @@ public class ItemAdapter extends ArrayAdapter<Item>{
     public ItemAdapter (Activity context, ArrayList<Item> Item){
         super(context, 0,Item);
     }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View listItemView = convertView;
-        if(listItemView == null) {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }
@@ -32,10 +33,10 @@ public class ItemAdapter extends ArrayAdapter<Item>{
         nameTextView.setText(currentItem.getName());
 
         TextView pricetextView = listItemView.findViewById(R.id.price_textview);
-        pricetextView.setText(currentItem.getmPrice());
+        pricetextView.setText(currentItem.getPrice());
 
-        ImageView imageView = listItemView.findViewById(R.id.imgae);
-        imageView.setImageResource(currentItem.getmImageResourceId());
+        ImageView imageView = listItemView.findViewById(R.id.image);
+        imageView.setImageResource(currentItem.getImageResourceId());
 
         return listItemView;
     }
