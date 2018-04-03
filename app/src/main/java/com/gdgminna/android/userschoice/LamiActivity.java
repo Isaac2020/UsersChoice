@@ -30,12 +30,13 @@ public class LamiActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ArrayList<Item> items = new ArrayList<>();
-        items.add(new Item("Rice", "N100", R.drawable.michga_foods));
-        items.add(new Item("Rice", "N100", R.drawable.michga_foods));
-        items.add(new Item("Rice", "N100", R.drawable.michga_foods));
-        items.add(new Item("Rice", "N100", R.drawable.michga_foods));
-        items.add(new Item("Rice", "N100", R.drawable.michga_foods));
-        items.add(new Item("Rice", "N100", R.drawable.michga_foods));
+
+        items.add(new Item("Rice", "N100", R.drawable.rice));
+        items.add(new Item("Rice", "N100", R.drawable.egusi_soup));
+        items.add(new Item("Rice", "N200", R.drawable.chicken));
+        items.add(new Item("Rice", "N100", R.drawable.jollof));
+        items.add(new Item("Rice", "N100", R.drawable.meat));
+        items.add(new Item("Rice", "N150", R.drawable.amala));
 
         ItemAdapter adapter = new ItemAdapter(this, items);
         ListView listView = findViewById(R.id.list);
