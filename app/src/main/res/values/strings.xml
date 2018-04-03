@@ -112,4 +112,5 @@
     <string name="title_activity_esther">EstherActivity</string>
     <string name="title_activity_timi">TimiActivity</string>
     <string name="title_activity_lami">LamiActivity</string>
+    <string name="title_activity_list">ListActivity</string>
 </resources>
