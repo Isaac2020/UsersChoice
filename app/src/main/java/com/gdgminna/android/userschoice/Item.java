@@ -1,17 +1,22 @@
 package com.gdgminna.android.userschoice;
 
+import com.android.tonyvu.sc.model.Saleable;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+
 /**
  * Created by MAGANI on 02/04/2018.
  */
 
-public class Item {
+public class Item implements Saleable, Serializable {
     private String mName;
-    private String mPrice;
+    private BigDecimal mUnitPrice;
     private  int mImageResourceId;
 
-    public Item(String name, String price, int imageResourceId) {
+    public Item(String name, BigDecimal price, int imageResourceId) {
         mName = name;
-        mPrice = price;
+        mUnitPrice = price;
         mImageResourceId = imageResourceId;
     }
 
@@ -19,8 +24,8 @@ public class Item {
         return mName;
     }
 
-    public String getPrice() {
-        return mPrice;
+    public BigDecimal getPrice() {
+        return mUnitPrice;
     }
 
     public int getImageResourceId() {
