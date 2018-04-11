@@ -56,15 +56,6 @@
                 android:value="com.gdgminna.android.userschoice.MainActivity" />
         </activity>
         <activity
-            android:name=".CartItemAdapter"
-            android:label="@string/title_activity_cart_item_adapter"
-            android:parentActivityName=".LaceActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.gdgminna.android.userschoice.LaceActivity" />
-        </activity>
-        <activity
             android:name=".CartActivity"
             android:label="@string/title_activity_cart"
             android:parentActivityName=".LaceActivity"

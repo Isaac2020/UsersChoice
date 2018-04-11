@@ -60,8 +60,8 @@ public class CartItemAdapter extends BaseAdapter {
                     .inflate(R.layout.cart_item_adapter, parent, false);
             Name = convertView.findViewById(R.id.name);
             UnitPrice = convertView.findViewById(R.id.unit_price);
-            Quantity = (TextView) convertView.findViewById(R.id.quantity);
-            Price = convertView.findViewById(R.id.price);
+            Quantity = convertView.findViewById(R.id.quantity);
+            Price = convertView.findViewById(R.id.total_amount);
             convertView.setTag(new ViewHolder(Name, UnitPrice, Quantity, Price));
         } else {
             ViewHolder viewHolder = (ViewHolder) convertView.getTag();
@@ -74,9 +74,9 @@ public class CartItemAdapter extends BaseAdapter {
         final Cart cart = CartHelper.getCart();
         final CartItem cartItem = getItem(position);
         Name.setText(cartItem.getItem().getName());
-        UnitPrice.setText(Constant.CURRENCY + String.valueOf(cartItem.getItem().getPrice().setScale(2, BigDecimal.ROUND_HALF_UP)));
+        UnitPrice.setText(Constant.CURRENCY + String.valueOf(cartItem.getItem().getUnitPrice().setScale(0, BigDecimal.ROUND_HALF_UP)));
         Quantity.setText(String.valueOf(cartItem.getQuantity()));
-        Price.setText(Constant.CURRENCY + String.valueOf(cart.getCost((Saleable) cartItem.getItem()).setScale(2, BigDecimal.ROUND_HALF_UP)));
+        Price.setText(Constant.CURRENCY + String.valueOf(cart.getCost((Saleable) cartItem.getItem()).setScale(0, BigDecimal.ROUND_HALF_UP)));
         return convertView;
     }
 
