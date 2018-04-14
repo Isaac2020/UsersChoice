@@ -24,7 +24,7 @@
         android:id="@+id/total"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_dark"
+        android:background="@color/colorPrimary"
         android:layout_above="@+id/bottom"
         android:orientation="horizontal"
         android:paddingTop="10dp"
@@ -37,6 +37,7 @@
             android:layout_weight="0.75"
             android:gravity="center_vertical|end"
             android:text="Total price"
+            android:textColor="@android:color/white"
             android:textStyle="bold" />
 
         <TextView
@@ -64,6 +65,7 @@
         android:layout_weight="0.5"
         android:text="Clear cart"
         android:textAllCaps="true"
+        android:background="@color/colorPrimary"
         android:textColor="@android:color/white"
         android:textStyle="bold" />
 
@@ -73,6 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
         android:text="Send Request"
+        android:background="@color/colorPrimary"
         android:textAllCaps="true"
         android:textColor="@android:color/white"
         android:textStyle="bold" />

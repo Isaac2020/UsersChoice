@@ -73,9 +73,19 @@ public class CartActivity extends AppCompatActivity {
         sendRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(CartActivity.this, "Request Sent", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(CartActivity.this, MainActivity.class);
-                startActivity(intent);
+                new AlertDialog.Builder(CartActivity.this)
+                        .setTitle(getResources().getString(R.string.confirmation_title))
+                        .setMessage(getResources().getString(R.string.confirmation_message))
+                        .setPositiveButton(getResources().getString(R.string.yes), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(CartActivity.this, "Request Sent, pls check your mail for request summary", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(CartActivity.this, MainActivity.class);
+                                startActivity(intent);
+                                  }
+                        })
+                        .setNegativeButton(getResources().getString(R.string.no), null)
+                        .show();
             }
         });
 

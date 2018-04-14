@@ -44,4 +44,6 @@
     <string name="title_activity_cart">CartActivity</string>
     <string name="action_cart">Cart</string>
     <string name="title_activity_list_view">ListViewActivity</string>
+    <string name="confirmation_title">Confirm Action</string>
+    <string name="confirmation_message">Are you sure you what to make this request?</string>
 </resources>
