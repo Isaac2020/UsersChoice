@@ -11,7 +11,7 @@ import android.widget.ListView;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
-public class LamiActivity extends AppCompatActivity {
+public class MummyKitchenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +55,7 @@ public class LamiActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_cart) {
-            Intent intent = new Intent(LamiActivity.this, CartActivity.class);
+            Intent intent = new Intent(MummyKitchenActivity.this, CartActivity.class);
             startActivity(intent);
             return true;
         } else if (id == R.id.action_settings) {
