@@ -62,6 +62,7 @@ public class CartActivity extends AppCompatActivity {
         clearCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Log.d(TAG, "Clearing the shopping cart");
                 cart.clear();
                 cartItemAdapter.updateCartItems(getCartItems(cart));
@@ -79,10 +80,11 @@ public class CartActivity extends AppCompatActivity {
                         .setPositiveButton(getResources().getString(R.string.yes), new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Toast.makeText(CartActivity.this, "Request Sent, pls check your mail for request summary", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(CartActivity.this, MainActivity.class);
+
+                                Intent intent = new Intent(CartActivity.this, LoginActivity.class);
                                 startActivity(intent);
-                                  }
+                                Toast.makeText(CartActivity.this, "Login to continue.", Toast.LENGTH_LONG).show();
+                            }
                         })
                         .setNegativeButton(getResources().getString(R.string.no), null)
                         .show();

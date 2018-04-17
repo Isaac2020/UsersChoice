@@ -65,7 +65,6 @@
         android:layout_weight="0.5"
         android:text="Clear cart"
         android:textAllCaps="true"
-        android:background="@color/colorPrimary"
         android:textColor="@android:color/white"
         android:textStyle="bold" />
 
@@ -75,7 +74,6 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
         android:text="Send Request"
-        android:background="@color/colorPrimary"
         android:textAllCaps="true"
         android:textColor="@android:color/white"
         android:textStyle="bold" />

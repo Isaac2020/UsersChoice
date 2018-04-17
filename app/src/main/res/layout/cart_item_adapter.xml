@@ -42,9 +42,6 @@
             android:paddingBottom="16dp"
             android:paddingRight="16dp"
             android:paddingTop="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
             android:textAppearance="?android:textAppearanceMedium" />
 
         <TextView

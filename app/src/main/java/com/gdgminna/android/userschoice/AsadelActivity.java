@@ -6,18 +6,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
-public class EstherActivity extends AppCompatActivity {
+public class AsadelActivity extends AppCompatActivity {
 
-    Spinner quantity;
+
     Intent intent;
-    Button addToCart;
+    Spinner Quantity;
+    Item item;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +29,7 @@ public class EstherActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-
-        ArrayList<Item> items = new ArrayList<>();
+        final ArrayList<Item> items = new ArrayList<>();
         items.add(new Item("Rice", BigDecimal.valueOf(200), 1, R.drawable.rice));
         items.add(new Item("Egusi soup", BigDecimal.valueOf(200),1, R.drawable.egusi_soup));
         items.add(new Item("Chicken", BigDecimal.valueOf(200), 1, R.drawable.chicken));
@@ -39,8 +39,7 @@ public class EstherActivity extends AppCompatActivity {
         items.add(new Item("Banga", BigDecimal.valueOf(200),0, R.drawable.bamga));
         items.add(new Item("Spagheti & Chicken", BigDecimal.valueOf(200),0, R.drawable.spackswithchicken));
 
-
-        ItemAdapter adapter = new ItemAdapter(this,items);
+        ItemAdapter adapter = new ItemAdapter(this, items);
         ListView listView = findViewById(R.id.list);
         listView.setAdapter(adapter);
     }
@@ -60,7 +59,7 @@ public class EstherActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_cart) {
-            intent = new Intent(EstherActivity.this, CartActivity.class);
+            intent = new Intent(AsadelActivity.this, CartActivity.class);
             startActivity(intent);
             return true;
         } else if (id == R.id.action_settings) {

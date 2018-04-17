@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity
             cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Intent intent = new Intent(getApplicationContext(),LaceActivity.class);
+               Intent intent = new Intent(getApplicationContext(),AsadelActivity.class);
                startActivity(intent);
             }
         });
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity
             cardView2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(getApplicationContext(), EstherActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), GoldenEateryActivity.class);
                     startActivity(intent);
                 }
             });
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity
             cardView3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(getApplicationContext(), LamiActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), MummyKitchenActivity.class);
                     startActivity(intent);
                 }
             });

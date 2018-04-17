@@ -18,6 +18,7 @@
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
         android:text="Currently Available"
+        android:textColor="@color/colorText"
         android:textAllCaps="true"
         android:textAppearance="?android:textAppearanceMedium"
         android:textStyle="bold" />
@@ -27,7 +28,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.gdgminna.android.userschoice.EstherActivity">
+        tools:context="com.gdgminna.android.userschoice.GoldenEateryActivity">
 
     </ListView>
 </LinearLayout>

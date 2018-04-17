@@ -14,9 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/app_name">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,15 +24,16 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity
-            android:name=".LaceActivity"
-            android:label="@string/title_activity_lace"
+            android:name=".AsadelActivity"
+            android:label="@string/title_activity_asadel"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".EstherActivity"
-            android:label="@string/title_activity_esther"
+            android:name=".GoldenEateryActivity"
+            android:label="@string/title_activity_golden_eatery"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -47,8 +46,8 @@
                 android:value="com.gdgminna.android.userschoice.MainActivity" />
         </activity>
         <activity
-            android:name=".LamiActivity"
-            android:label="@string/title_activity_lami"
+            android:name=".MummyKitchenActivity"
+            android:label="@string/title_activity_mummy_kitchen"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -58,11 +57,11 @@
         <activity
             android:name=".CartActivity"
             android:label="@string/title_activity_cart"
-            android:parentActivityName=".LaceActivity"
+            android:parentActivityName=".AsadelActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.gdgminna.android.userschoice.LaceActivity" />
+                android:value="com.gdgminna.android.userschoice.AsadelActivity" />
         </activity>
         <activity
             android:name=".ListViewActivity"
@@ -73,6 +72,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.gdgminna.android.userschoice.MainActivity" />
         </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"/>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/title_activity_register"/>
+
     </application>
 
 </manifest>
