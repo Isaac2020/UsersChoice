@@ -62,12 +62,13 @@ public class CartActivity extends AppCompatActivity {
         clearCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Log.d(TAG, "Clearing the shopping cart");
                 cart.clear();
                 cartItemAdapter.updateCartItems(getCartItems(cart));
                 cartItemAdapter.notifyDataSetChanged();
                 totalPrice.setText(Constant.CURRENCY + String.valueOf(cart.getTotalPrice().setScale(2, BigDecimal.ROUND_HALF_UP)));
+                Toast.makeText(CartActivity.this, "Cart Cleared.", Toast.LENGTH_LONG).show();
+
             }
         });
 
@@ -122,6 +123,7 @@ public class CartActivity extends AppCompatActivity {
                 Item item = cartItems.get(position -1).getItem();
                 Log.d(TAG, "Viewing product: " + item.getName());
                 bundle.putSerializable("item", item);
+
                 Intent intent = new Intent(CartActivity.this, ListViewActivity.class);
                 intent.putExtras(bundle);
                 //startActivity(intent);

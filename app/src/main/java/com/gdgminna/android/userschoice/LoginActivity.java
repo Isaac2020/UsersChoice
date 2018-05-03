@@ -12,6 +12,7 @@ import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.android.tonyvu.sc.model.Cart;
 import com.android.tonyvu.sc.model.Saleable;
@@ -123,13 +124,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (databaseHelper.checkUser(textInputEditTextEmail.getText().toString().trim()
                 , textInputEditTextPassword.getText().toString().trim())) {
 
-            Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-            emailIntent.setData(Uri.parse("mailto:"));
-            emailIntent.setType("text/plain");
-            emailIntent.putExtra(Intent.EXTRA_EMAIL,textInputEditTextEmail.getText().toString());
-            emailIntent.putExtra(Intent.EXTRA_SUBJECT,"Order Request from APP");
-           // emailIntent.putExtra(Intent.EXTRA_TEXT,  getCartItems(getCartItems(Cart, cart))  );
-            startActivity(emailIntent);
+            Toast.makeText(this, "Request Order Sent", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this,MainActivity.class);
+            emptyInputEditText();
+            startActivity(intent);
+//            Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+//            emailIntent.setData(Uri.parse("mailto:"));
+//            emailIntent.setType("text/plain");
+//            emailIntent.putExtra(Intent.EXTRA_EMAIL,textInputEditTextEmail.getText().toString());
+//            emailIntent.putExtra(Intent.EXTRA_SUBJECT,"Order Request from APP");
+//           // emailIntent.putExtra(Intent.EXTRA_TEXT,  CartItem(getCartItems())  );
+//            startActivity(emailIntent);
 
 
         } else {
@@ -146,20 +151,4 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         textInputEditTextPassword.setText(null);
     }
 
-    private List<CartItem> getCartItems(Cart cart) {
-        List<CartItem> cartItems = new ArrayList<CartItem>();
-        Log.d(TAG, "Current shopping cart: " + cart);
-
-        Map<Saleable, Integer> itemMap = cart.getItemWithQuantity();
-
-        for (Map.Entry<Saleable, Integer> entry : itemMap.entrySet()) {
-            CartItem cartItem = new CartItem();
-            cartItem.setItem((Item) entry.getKey());
-            cartItem.setQuantity(entry.getValue());
-            cartItems.add(cartItem);
-        }
-
-        Log.d(TAG, "Cart item list: " + cartItems);
-        return cartItems;
-    }
 }

@@ -1,1 +1,1 @@
-com.android.tonyvu.sc.test
+com.gdgminna.android.userschoice.test

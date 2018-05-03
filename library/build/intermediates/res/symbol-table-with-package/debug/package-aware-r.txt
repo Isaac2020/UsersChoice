@@ -1,1 +1,1 @@
-com.android.tonyvu.sc
+com.gdgminna.android.userschoice

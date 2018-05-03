@@ -110,17 +110,35 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_asadel) {
+            Intent intent = new Intent(MainActivity.this, AsadelActivity.class);
+            startActivity(intent);
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_mummy) {
+            Intent intent = new Intent(MainActivity.this,MummyKitchenActivity.class);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_timi) {
+            Intent intent = new Intent(MainActivity.this, TimiActivity.class);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_golden) {
+            Intent intent = new Intent(MainActivity.this, GoldenEateryActivity.class);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_users) {
+            Intent intent = new Intent(MainActivity.this, UsersListActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_send) {
+            Intent share = new Intent (Intent.ACTION_SEND);
+            share.setType("text/plain");
+            share.putExtra(Intent.EXTRA_SUBJECT,"Food for You App");
+            share.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE,R.drawable.cult);
+            share.putExtra(Intent.EXTRA_TEXT,"I am using the Food for Aou App for Android " +
+                    "to order food right within the Gidan Kwano campus.\n You can join me, give the app a try.");
+            startActivity(share);
+            return true;
 
         }
 

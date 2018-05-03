@@ -5,29 +5,29 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Restaurants" />
+            android:id="@+id/nav_asadel"
+            android:icon="@drawable/ic_restaurant_black_24dp"
+            android:title="Asadel Restaurant" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/nav_mummy"
+            android:icon="@drawable/ic_restaurant_black_24dp"
+            android:title="Mummy's Kitchen" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/nav_timi"
+            android:icon="@drawable/ic_restaurant_black_24dp"
+            android:title="Timi's Restaurant" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_golden"
+            android:icon="@drawable/ic_restaurant_black_24dp"
+            android:title="Golden Eatery" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Database">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:id="@+id/nav_users"
+                android:icon="@drawable/ic_person_black_24dp"
+                android:title="Users Account" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
