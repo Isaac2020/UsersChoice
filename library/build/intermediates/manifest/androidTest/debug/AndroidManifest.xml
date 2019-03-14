@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gdgminna.android.userschoice.test" >
+    package="com.android.tonyvu.sc.test" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -10,8 +10,8 @@
         android:name="android.test.InstrumentationTestRunner"
         android:functionalTest="false"
         android:handleProfiling="false"
-        android:label="Tests for com.gdgminna.android.userschoice.test"
-        android:targetPackage="com.gdgminna.android.userschoice.test" />
+        android:label="Tests for com.android.tonyvu.sc.test"
+        android:targetPackage="com.android.tonyvu.sc.test" />
 
     <application
         android:allowBackup="true"

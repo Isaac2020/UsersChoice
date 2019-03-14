@@ -29,9 +29,9 @@
                 android:icon="@drawable/ic_person_black_24dp"
                 android:title="Users Account" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="Share App" />
         </menu>
     </item>
 

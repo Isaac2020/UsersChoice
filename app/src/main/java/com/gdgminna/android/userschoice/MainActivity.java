@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(MainActivity.this, UsersListActivity.class);
             startActivity(intent);
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_share) {
             Intent share = new Intent (Intent.ACTION_SEND);
             share.setType("text/plain");
             share.putExtra(Intent.EXTRA_SUBJECT,"Food for You App");

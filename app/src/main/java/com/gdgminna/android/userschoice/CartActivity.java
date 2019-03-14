@@ -42,7 +42,7 @@ public class CartActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        cartItems = (ListView) findViewById(R.id.cart_items);
+        cartItems = findViewById(R.id.cart_items);
         LayoutInflater layoutInflater = getLayoutInflater();
 
 

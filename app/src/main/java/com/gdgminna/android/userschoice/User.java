@@ -47,7 +47,7 @@ public class User {
 
     public String getPhoneNumber(){return phonenumber;}
 
-    public void setPhonenumber(String phonenumber){this.phonenumber = phonenumber;}
+    public void setPhoneNumber(String phonenumber){this.phonenumber = phonenumber;}
 
     public String getAddress(){return address;}
 

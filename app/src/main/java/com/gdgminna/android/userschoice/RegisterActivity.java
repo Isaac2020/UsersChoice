@@ -121,10 +121,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if (!inputValidation.isInputEditTextFilled(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
             return;
         }
-        if (!inputValidation.isInputEditTextEmail(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
-            return;
-        }
-        if (!inputValidation.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPhoneNumber, getString(R.string.error_message_phone_number))) {
+//        if (!inputValidation.isInputEditTextEmail(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
+//            return;
+//        }
+        if (!inputValidation.isInputEditTextFilled(textInputEditTextPhoneNumber, textInputLayoutPhoneNumber, getString(R.string.error_message_phone_number))) {
             return;
         }
         if (!inputValidation.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_password))) {
@@ -133,14 +133,16 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if (!inputValidation.isInputEditTextMatches(textInputEditTextPassword, textInputEditTextConfirmPassword,
                 textInputLayoutConfirmPassword, getString(R.string.error_password_match))) {
             return;
+        } if (!inputValidation.isInputEditTextFilled(textInputEditTextAddress, textInputLayoutAddress, getString(R.string.error_message_name))) {
+            return;
         }
 
         if (!databaseHelper.checkUser(textInputEditTextEmail.getText().toString().trim())) {
-
             user.setName(textInputEditTextName.getText().toString().trim());
             user.setEmail(textInputEditTextEmail.getText().toString().trim());
+            user.setPhoneNumber(textInputEditTextPhoneNumber.getText().toString().trim());
             user.setPassword(textInputEditTextPassword.getText().toString().trim());
-
+            user.setAddress(textInputEditTextAddress.getText().toString().trim());
             databaseHelper.addUser(user);
 
             // Snack Bar to show success message that record saved successfully

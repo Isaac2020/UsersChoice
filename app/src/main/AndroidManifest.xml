@@ -26,7 +26,8 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity
             android:name=".AsadelActivity"
             android:label="@string/title_activity_asadel"
@@ -79,7 +80,9 @@
         <activity
             android:name=".RegisterActivity"
             android:label="@string/title_activity_register" />
-        <activity android:name=".UsersListActivity"></activity>
+        <activity
+            android:name=".UsersListActivity">
+        </activity>
     </application>
 
 </manifest>
